@@ -184,6 +184,9 @@ tfoot td{border-bottom:0;font-weight:800;background:var(--tint)}
 
 /* condiciones */
 .boxes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:22px}
+.boxes:has(.box--cond:only-child){grid-template-columns:1fr}
+.box--cond ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+@media (max-width:700px){.box--cond ul{grid-template-columns:1fr}}
 .box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:14px;align-content:start;min-width:0}
 .box .k{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--label)}
 .box ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
@@ -482,15 +485,7 @@ tfoot td{border-bottom:0;font-weight:800;background:var(--tint)}
       </div>
     </div>
     <div class="boxes">
-      <div class="box"><span class="k">Para confirmar antes de arrancar</span><ul>
-        <li><b>Cap. 1, escena 2</b> (imágenes de los equipos, unos 7 s): está en el ERD pero no en el desglose.</li>
-        <li><b>Cap. 2, escena 1</b> es ampliar una foto 1:1 o 4:5 a 16:9, no un dibujo.</li>
-        <li><b>Las 5 ediciones de foto</b> del ERD: ¿son en total o por capítulo?</li></ul></div>
-      <div class="box"><span class="k">No incluye</span><ul>
-        <li>Edición general del documental, sonido y música.</li>
-        <li>Derechos o licencias del material de archivo.</li>
-        <li>Planos adicionales a los de la opción elegida.</li></ul></div>
-      <div class="box"><span class="k">Condiciones</span><ul>
+      <div class="box box--cond"><span class="k">Condiciones</span><ul>
         <li>Valores en COP + IVA.</li>
         <li>En la opción A, hasta un 30% de la animación se hace con IA.</li>
         <li>Planos adicionales se cotizan aparte.</li>
